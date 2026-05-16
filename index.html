@@ -1,0 +1,324 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <title>GlowSkin Beauty</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#">GlowSkin</a>
+
+        <!-- flex change -->
+        <div class="mobileflex">
+          <div class="nav-mobile">
+            <input
+              type="checkbox"
+              id="menu-toggle"
+              class="menu-toggle"
+              hidden
+            />
+            <label
+              for="menu-toggle"
+              class="menu-icon"
+              aria-label="Toggle navigation"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </label>
+            <nav class="nav-links">
+              <a href="#benefits">Benefits</a>
+              <a href="#products">Products</a>
+              <a href="#reviews">Reviews</a>
+              <a href="#contact">Contact</a>
+              <a class="btn btn-primary" href="#products">Shop Now</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">Natural skin care</span>
+            <h1>Glow with gentle formulas that restore skin confidence.</h1>
+            <p>
+              Discover clean, dermatologist-inspired products made to hydrate,
+              brighten, and soothe every skin type.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#products">Shop Bestsellers</a>
+              <a class="btn btn-secondary" href="#benefits">Explore Benefits</a>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <img src="cheerful-smiling-african-american.png" alt="example" />
+          </div>
+        </div>
+      </section>
+
+      <section id="benefits" class="container values">
+        <div class="section-heading">
+          <p class="eyebrow">Why GlowSkin</p>
+          <h2>Pure ingredients. Visible results.</h2>
+        </div>
+        <div class="value-grid">
+          <article class="value-card">
+            <div class="value-icon">🌿</div>
+            <h3>Clean Beauty</h3>
+            <p>
+              Plant-powered formulas free from parabens, sulfates, and
+              artificial fragrances.
+            </p>
+          </article>
+          <article class="value-card">
+            <div class="value-icon">💧</div>
+            <h3>Deep Hydration</h3>
+            <p>
+              Lightweight textures that lock in moisture and leave skin soft all
+              day.
+            </p>
+          </article>
+          <article class="value-card">
+            <div class="value-icon">✨</div>
+            <h3>Glow Boost</h3>
+            <p>
+              Brightening actives and antioxidants that help even tone and
+              restore radiance.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="products" class="container products">
+        <div class="section-heading">
+          <p class="eyebrow">Featured</p>
+          <h2>Shop our best-selling essentials.</h2>
+        </div>
+        <div class="product-carousel">
+          <button
+            class="product-arrow left"
+            id="prevProduct"
+            aria-label="Previous product"
+          >
+            &#10094;
+          </button>
+          <div class="product-track" id="shop">
+            <article class="product-card">
+              <div class="product-thumb product-cream">
+                <img src="curology.png" alt="" />
+              </div>
+              <h3>Daily Moisturizer</h3>
+              <p>Silky hydration to calm and protect with each application.</p>
+              <div class="product-footer">
+                <span class="price">$28</span>
+                <button class="btn-order">Place Order</button>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-thumb product-serum">
+                <img src="curology.png" alt="" />
+              </div>
+              <h3>Radiance Serum</h3>
+              <p>Powerful vitamin C blend for luminous, even-looking skin.</p>
+              <div class="product-footer">
+                <span class="price">$34</span>
+                <button class="btn-order">Place Order</button>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-thumb product-mist">
+                <img src="curology.png" alt="" />
+              </div>
+              <h3>Calming Mist</h3>
+              <p>Refresh skin instantly with soothing botanical hydration.</p>
+              <div class="product-footer">
+                <span class="price">$22</span>
+                <button class="btn-order">Place Order</button>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-thumb product-mist">
+                <img src="curology.png" alt="" />
+              </div>
+              <h3>Overnight Renewal Mask</h3>
+              <p>Refresh skin instantly with soothing botanical hydration.</p>
+              <div class="product-footer">
+                <span class="price">$22</span>
+                <button class="btn-order">Place Order</button>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-thumb product-mist">
+                <img src="curology.png" alt="" />
+              </div>
+              <h3>Gentle Vitamin Cleaner</h3>
+              <p>Refresh skin instantly with soothing botanical hydration.</p>
+              <div class="product-footer">
+                <span class="price">$22</span>
+                <button class="btn-order">Place Order</button>
+              </div>
+            </article>
+          </div>
+          <button
+            class="product-arrow right"
+            id="nextProduct"
+            aria-label="Next product"
+          >
+            &#10095;
+          </button>
+        </div>
+      </section>
+
+      <section id="reviews" class="container testimonials">
+        <div class="section-heading">
+          <p class="eyebrow">Customer love</p>
+          <h2>Real results from happy skin.</h2>
+        </div>
+        <div class="testimonial-carousel">
+          <div class="testimonial-track">
+            <article class="testimonial-card">
+              <p>
+                “My skin feels hydrated and brighter after just one week. The
+                texture is so lightweight.”
+              </p>
+              <strong>— Mia, 32</strong>
+            </article>
+            <article class="testimonial-card">
+              <p>
+                “The calming mist is my daily reset after long days. It smells
+                fresh and never irritates.”
+              </p>
+              <strong>— Zoe, 27</strong>
+            </article>
+            <article class="testimonial-card">
+              <p>
+                “The overnight mask gave me glowing skin by morning. It feels
+                luxurious yet gentle.”
+              </p>
+              <strong>— Priya, 29</strong>
+            </article>
+            <article class="testimonial-card">
+              <p>
+                “I love how the serum smooths my skin and helps reduce redness.
+                It’s become part of my daily ritual.”
+              </p>
+              <strong>— Anna, 35</strong>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="container newsletter">
+        <div class="newsletter-card">
+          <div>
+            <p class="eyebrow">Stay glowing</p>
+            <h2>Join our beauty list for early access and offers.</h2>
+          </div>
+          <div class="app">
+            <a
+              href="https://wa.me/2349023679816"
+              aria-label="Chat with us on WhatsApp"
+              title="WhatsApp"
+            >
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/_dwf.dave_"
+              aria-label="Visit our Instagram"
+              title="Instagram"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a
+              href="https://t.me/Ayodeji_001"
+              aria-label="Visit our Telegram channel"
+              title="Telegram"
+            >
+              <i class="fa-brands fa-telegram"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>GlowSkin • Natural care for every type of beauty.</p>
+        <p>© 2026 GlowSkin</p>
+      </div>
+    </footer>
+
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const navLinks = document.querySelectorAll(".nav-links a");
+      const productTrack = document.getElementById("shop");
+      const nextProduct = document.getElementById("nextProduct");
+      const prevProduct = document.getElementById("prevProduct");
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          if (menuToggle.checked) {
+            menuToggle.checked = false;
+          }
+        });
+      });
+
+      const getSlideAmount = () => {
+        const firstCard = productTrack.querySelector(".product-card");
+        const gap = parseInt(getComputedStyle(productTrack).gap, 10) || 24;
+        return firstCard ? firstCard.offsetWidth + gap : 0;
+      };
+
+      let isAnimating = false;
+
+      nextProduct.addEventListener("click", () => {
+        if (isAnimating) return;
+        isAnimating = true;
+
+        const slideAmount = getSlideAmount();
+        productTrack.style.transform = `translateX(-${slideAmount}px)`;
+
+        setTimeout(() => {
+          productTrack.style.transition = "none";
+          productTrack.appendChild(productTrack.firstElementChild);
+          productTrack.style.transform = "translateX(0)";
+
+          requestAnimationFrame(() => {
+            productTrack.style.transition = "transform 0.5s ease";
+            isAnimating = false;
+          });
+        }, 500);
+      });
+
+      prevProduct.addEventListener("click", () => {
+        if (isAnimating) return;
+        isAnimating = true;
+
+        productTrack.style.transition = "none";
+        const slideAmount = getSlideAmount();
+        productTrack.prepend(productTrack.lastElementChild);
+        productTrack.style.transform = `translateX(-${slideAmount}px)`;
+
+        requestAnimationFrame(() => {
+          productTrack.style.transition = "transform 0.5s ease";
+          productTrack.style.transform = "translateX(0)";
+
+          setTimeout(() => {
+            isAnimating = false;
+          }, 500);
+        });
+      });
+    </script>
+  </body>
+</html>
