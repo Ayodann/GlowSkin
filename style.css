@@ -181,6 +181,18 @@ a {
   gap: 2.5rem;
 }
 
+.fa-leaf {
+  color: green;
+}
+
+.fa-tint {
+  color: skyblue;
+}
+
+.fa-star {
+  color: gold;
+}
+
 .eyebrow {
   display: inline-block;
   margin-bottom: 1rem;
@@ -218,18 +230,6 @@ a {
 
 .hero-visual img {
   max-width: 26.9rem;
-}
-
-.glass-swatch {
-  width: 100%;
-  height: 320px;
-  border-radius: 1.75rem;
-  background: linear-gradient(
-    135deg,
-    rgba(198, 149, 109, 0.18),
-    rgba(239, 227, 215, 0.38)
-  );
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
 }
 
 .product-badge {
@@ -280,14 +280,20 @@ a {
 }
 
 .value-card,
-.product-card,
-.testimonial-card,
 .newsletter-card {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 1.75rem;
   padding: 2rem;
   box-shadow: var(--shadow);
+}
+
+.product-card,
+.testimonial-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1.75rem;
+  padding: 2rem;
 }
 
 .value-icon {
@@ -313,9 +319,6 @@ a {
   color: var(--text-muted);
   line-height: 1.75;
 }
-.product-card h3 {
-  margin: 0;
-}
 
 .product-carousel {
   position: relative;
@@ -330,12 +333,6 @@ a {
 }
 
 .product-card {
-  display: flex;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 1.75rem;
-  padding: 2rem;
-  box-shadow: var(--shadow);
   flex-direction: column;
   gap: 1rem;
   margin: 0;
@@ -343,6 +340,7 @@ a {
   line-height: 1.75;
   flex: 0 0 calc(33.333% - 1rem);
   min-width: calc(33.333% - 1rem);
+  transition: transform 0.2s ease;
 }
 .product-thumb {
   display: flex;
@@ -463,7 +461,8 @@ a {
   background: rgba(246, 214, 172, 0.18);
 }
 
-.testimonial-card:hover {
+.testimonial-card:hover,
+.product-card:hover {
   transform: translateY(-0.25rem) scale(1.01);
   box-shadow: 0 38px 100px rgba(31, 26, 22, 0.12);
 }
@@ -508,18 +507,22 @@ a {
 
 @keyframes slideTestimonialsMobile {
   0%,
-  28% {
+  18% {
     transform: translateX(0);
   }
-  33%,
-  45% {
+  22%,
+  34% {
     transform: translateX(-100%);
   }
-  55%,
-  83% {
-    transform: translateX(-100%);
+  38%,
+  50% {
+    transform: translateX(-200%);
   }
-  88%,
+  54%,
+  66% {
+    transform: translateX(-300%);
+  }
+  70%,
   100% {
     transform: translateX(0);
   }
@@ -599,6 +602,20 @@ a {
   .hero-grid,
   .newsletter-card {
     grid-template-columns: 1fr;
+  }
+
+  .hero-grid {
+    align-items: start;
+  }
+
+  .hero-visual {
+    justify-content: center;
+  }
+
+  .hero-visual img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
   }
 
   .values .value-grid {
@@ -700,6 +717,25 @@ a {
     left: 1.5rem;
     right: 1.5rem;
   }
+
+  .product-track {
+    gap: 0.75rem;
+  }
+
+  .product-card {
+    flex: 0 0 100%;
+    min-width: 100%;
+  }
+
+  .testimonial-track {
+    gap: 0;
+    animation: slideTestimonialsMobile 18s ease-in-out infinite;
+  }
+
+  .testimonial-card {
+    flex: 0 0 100%;
+    min-width: 100%;
+  }
 }
 
 @media (max-width: 540px) {
@@ -765,12 +801,17 @@ a {
 
   .testimonial-track {
     gap: 0;
-    animation: slideTestimonialsMobile 12s ease-in-out infinite;
+    animation: slideTestimonialsMobile 18s ease-in-out infinite;
   }
 
   .testimonial-card {
     flex: 0 0 100%;
     min-width: 100%;
+  }
+
+  .newsletter-card {
+    flex-direction: column;
+    align-items: stretch;
   }
 
   .site-footer {
