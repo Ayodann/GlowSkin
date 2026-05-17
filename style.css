@@ -598,6 +598,11 @@ a {
   color: var(--text-muted);
 }
 
+.footer-inner a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
 @media (max-width: 900px) {
   .hero-grid,
   .newsletter-card {
