@@ -342,10 +342,19 @@ a {
   min-width: calc(33.333% - 1rem);
   transition: transform 0.2s ease;
 }
+
+.product-card:hover {
+  transform: translateY(-0.25rem) scale(1.01);
+  box-shadow: 0 0 60px rgba(31, 26, 22, 0.12);
+}
 .product-thumb {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.product-thumb img {
+  max-height: 12rem;
 }
 
 .product-arrow {
@@ -461,10 +470,9 @@ a {
   background: rgba(246, 214, 172, 0.18);
 }
 
-.testimonial-card:hover,
-.product-card:hover {
+.testimonial-card:hover {
   transform: translateY(-0.25rem) scale(1.01);
-  box-shadow: 0 38px 100px rgba(31, 26, 22, 0.12);
+  box-shadow: 0 0px 20px rgba(31, 26, 22, 0.12);
 }
 
 .testimonial-card:nth-child(1),
